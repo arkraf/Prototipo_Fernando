@@ -34,7 +34,16 @@ public class balaNormal : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             mng = collision.gameObject.GetComponent<gameManager>();
-            mng.vida -= danoJ;
+
+            if(mng.escudo > 0)
+            {
+                mng.escudo -= danoJ;
+            }
+            else
+            {
+                mng.vida -= danoJ;
+            }
+            
         }
         Destroy(this.gameObject);
 

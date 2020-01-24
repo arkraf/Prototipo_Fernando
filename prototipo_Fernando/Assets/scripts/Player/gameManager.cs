@@ -7,7 +7,8 @@ public class gameManager : MonoBehaviour
 {
     public float vida;
     public int vidaMax = 100;
-    public int escudo = 0;
+    public float escudo = 0;
+    public float escudoMax;
     public int exp = 0;
     public float expNeed = 0;
     public int nivel = 1;
@@ -21,6 +22,7 @@ public class gameManager : MonoBehaviour
     public Slider barraVida;
     public Slider barraEnergía;
     public Slider barraCombustible;
+    public Slider barraEscudo;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,7 @@ public class gameManager : MonoBehaviour
             vida = vidaMax;
             energia = energiaMax;
             combustible = combustibleMax;
+        
 
         }
 
@@ -55,5 +58,7 @@ public class gameManager : MonoBehaviour
         barraVida.maxValue = vidaMax;
         barraEnergía.maxValue = energiaMax;
         barraCombustible.maxValue = combustibleMax;
+        barraEscudo.value = escudo;
+        barraEscudo.maxValue = escudoMax;
     }
 }
