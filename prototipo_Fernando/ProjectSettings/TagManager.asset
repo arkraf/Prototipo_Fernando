@@ -7,6 +7,7 @@ TagManager:
   - bala
   - enemigo
   - pared
+  - elMuro
   layers:
   - Default
   - TransparentFX

@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
+  mng: {fileID: 0}
 --- !u!54 &2533169636586295311
 Rigidbody:
   m_ObjectHideFlags: 0

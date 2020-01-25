@@ -6,7 +6,6 @@ public class recogida : MonoBehaviour
 {
     public GameObject player;
     public gameManager mng;
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +21,12 @@ public class recogida : MonoBehaviour
     {
         if (other.gameObject == player)
         {
-            
-            Destroy(this.gameObject);
+            if(mng.vida < mng.vidaMax)
+            {
+                mng.vida += ((mng.vidaMax *20 ) / 100);
+                Destroy(this.gameObject);
+            }
+           
         }
 
     }

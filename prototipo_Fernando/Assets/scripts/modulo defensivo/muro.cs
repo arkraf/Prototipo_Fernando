@@ -7,6 +7,7 @@ public class muro : MonoBehaviour
     public float duration = 3f;
     public PlayerController player;
     public GameObject wallPrefab;
+    public gameManager mng;
 
     public Transform cañon;
     void Start()
@@ -18,15 +19,18 @@ public class muro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButton(1))
-        {
-            wallPrefab.SetActive(true);
-
-            player.speed = 0f;
-            Invoke("wall", duration);
-        }
-       
         
+        if (mng.energia >= 30) 
+        {
+            if (Input.GetMouseButton(1))
+            {
+                wallPrefab.SetActive(true);
+
+                player.speed = 0f;
+                Invoke("wall", duration);
+            }
+        }
+
     }
     public void wall()
     {

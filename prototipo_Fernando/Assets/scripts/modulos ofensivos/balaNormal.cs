@@ -43,16 +43,25 @@ public class balaNormal : MonoBehaviour
             {
                 mng.vida -= danoJ;
             }
-            
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+      
 
         if (collision.gameObject.tag == "enemigo")
         {
             enemy = collision.gameObject.GetComponent<enemyManager>();
             enemy.vida -= danno;
-
+            Destroy(this.gameObject);
         }
-        Destroy(this.gameObject);
+
+        if (collision.tag == "elMuro")
+        {
+            Debug.Log("pipo");
+            Destroy(this.gameObject);
+            
+        }
+
+
     }
+   
 }

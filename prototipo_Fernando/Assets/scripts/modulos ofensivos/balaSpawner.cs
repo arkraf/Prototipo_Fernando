@@ -46,23 +46,26 @@ public class balaSpawner : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(timeToSpawn == 2)
-        {
+        
             if (other.gameObject.tag == "Player")
             {
-                shoot();
+                if (timeToSpawn == 2)
+                {
+                    shoot();
+                    
+                }
+
+                timeToSpawn -= 1 *Time.deltaTime;
+
+                if (timeToSpawn <= 0)
+                {
+                timeToSpawn = 2;
+                }
+                    
                 
             }     
-        }
-        if((timeToSpawn <2)&&(timeToSpawn >= 0))
-        {
-            timeToSpawn -= 1 * Time.deltaTime;
-        }
-        if (timeToSpawn <= 0)
-        {
-            timeToSpawn = 2;
-
-        }
+        
+       
 
 
     }

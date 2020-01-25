@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1447743920847086027}
   m_Layer: 0
   m_Name: muro
-  m_TagString: Untagged
+  m_TagString: elMuro
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,5 +105,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7acbcc9f419a1354f97e73f79f2f8090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 3
-  player: {fileID: 170848826141675286, guid: c5778871ac29bc244a082a70e931d655, type: 3}

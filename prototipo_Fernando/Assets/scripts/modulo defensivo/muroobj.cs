@@ -14,12 +14,6 @@ public class muroobj : MonoBehaviour
         
              
     }
-    private void OnTriggerEnter(Collider collision)
-    {
-        if(collision.gameObject.tag == "bala")
-        {
-            Destroy(collision.gameObject);
-        }
-    }
+    
 
 }

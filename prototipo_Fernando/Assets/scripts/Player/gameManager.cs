@@ -19,10 +19,24 @@ public class gameManager : MonoBehaviour
     public int energiaMax;
     public int combustible;
     public int combustibleMax;
+
+    [Header("BarraPj")]
+
     public Slider barraVida;
     public Slider barraEnergía;
     public Slider barraCombustible;
     public Slider barraEscudo;
+    public Slider barraExp;
+    public Text contadorHP;
+    public Text contadorEnergia;
+    public Text contadorCombustible;
+    public Text contadorExp;
+    public Text contadorEscudo;
+
+    [Header("Respawn")]
+
+    public Transform player;
+    public Transform respawn;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +44,8 @@ public class gameManager : MonoBehaviour
         vida = vidaMax;
         energia = energiaMax;
         combustible = combustibleMax;
+
+        respawn.position = player.position;
     }
 
     // Update is called once per frame
@@ -60,5 +76,24 @@ public class gameManager : MonoBehaviour
         barraCombustible.maxValue = combustibleMax;
         barraEscudo.value = escudo;
         barraEscudo.maxValue = escudoMax;
+        barraExp.value = exp;
+        barraExp.maxValue = expNeed;
+        contadorHP.text = "Vida :  " + vida;
+        contadorEnergia.text = "Energía :  " + energia;
+        contadorCombustible.text = "Combustible :  " + combustible;
+        contadorExp.text = "Exp";
+        contadorEscudo.text = "Escudo : " + escudo;
+
+        //Respawn
+        if (vida <= 0)
+        {
+            player.position = respawn.position;
+
+            vida = vidaMax;
+            energia = energiaMax;
+            combustible = combustibleMax;
+            escudo = 0;
+        }
+
     }
 }

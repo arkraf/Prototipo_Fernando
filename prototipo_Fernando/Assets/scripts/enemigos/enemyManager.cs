@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemyManager : MonoBehaviour
 {
     public float vida = 100;
+    public gameManager mng;
      
 
     // Start is called before the first frame update
@@ -18,9 +19,11 @@ public class enemyManager : MonoBehaviour
     {
         if (vida <= 0)
         {
+            mng.exp += 20;
             Destroy(this.gameObject);
         }
     }
+
     
    
 }

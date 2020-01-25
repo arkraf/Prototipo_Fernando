@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Drop.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -70,13 +71,12 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\kamikaze.cs" />
-    <Compile Include="Assets\playerManager.cs" />
+    <Compile Include="Assets\scripts\enemigos\enemyManager.cs" />
+    <Compile Include="Assets\scripts\enemigos\kamikaze.cs" />
     <Compile Include="Assets\scripts\enemigos\torreta\Cañon.cs" />
     <Compile Include="Assets\scripts\enemigos\torreta\LookAt.cs" />
     <Compile Include="Assets\scripts\enemigos\torreta\MiraLaser.cs" />
     <Compile Include="Assets\scripts\enemigos\torreta\torretaManager.cs" />
-    <Compile Include="Assets\scripts\enemyManager.cs" />
     <Compile Include="Assets\scripts\modulo defensivo\escudo.cs" />
     <Compile Include="Assets\scripts\modulo defensivo\muro.cs" />
     <Compile Include="Assets\scripts\modulo defensivo\muroobj.cs" />
@@ -91,11 +91,12 @@
     <Compile Include="Assets\scripts\modulos ofensivos\explosivos.cs" />
     <Compile Include="Assets\scripts\modulos ofensivos\fuego.cs" />
     <Compile Include="Assets\scripts\modulos ofensivos\lanzallamas.cs" />
-    <Compile Include="Assets\scripts\modulos ofensivos\recogida.cs" />
     <Compile Include="Assets\scripts\modulos ofensivos\SwitchWeapon.cs" />
     <Compile Include="Assets\scripts\Player\gameManager.cs" />
     <Compile Include="Assets\scripts\Player\mouseGiro.cs" />
     <Compile Include="Assets\scripts\Player\PlayerController.cs" />
+    <Compile Include="Assets\scripts\Player\playerManager.cs" />
+    <Compile Include="Assets\scripts\Player\recogida.cs" />
     <Compile Include="Assets\scripts\Player\SmoothPosition.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
