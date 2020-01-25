@@ -5,6 +5,10 @@ using UnityEngine;
 public class switchDefense : MonoBehaviour
 {
     public int SeleccionDefensa = 0;
+
+    public GameObject escudo;
+    public GameObject muro;
+    public GameObject areaElectrica;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,26 @@ public class switchDefense : MonoBehaviour
         if (PreviousSelectedWeapon != SeleccionDefensa)
         {
             SelectWeapon();
+        }
+
+
+        if (SeleccionDefensa == 0)
+        {
+            escudo.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+            muro.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            areaElectrica.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        }
+        if (SeleccionDefensa == 1)
+        {
+            escudo.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            muro.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            areaElectrica.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+        }
+        if (SeleccionDefensa == 2)
+        {
+            escudo.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            muro.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+            areaElectrica.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
         }
     }
     void SelectWeapon()

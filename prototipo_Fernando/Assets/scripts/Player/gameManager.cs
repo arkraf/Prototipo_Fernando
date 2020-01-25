@@ -38,6 +38,12 @@ public class gameManager : MonoBehaviour
     public Transform player;
     public Transform respawn;
 
+    [Header("modulos")]
+
+    public Text ammoAuto;
+    public Text ammoExplo;
+    public Text ammoFire;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,6 +89,9 @@ public class gameManager : MonoBehaviour
         contadorCombustible.text = "Combustible :  " + combustible;
         contadorExp.text = "Exp";
         contadorEscudo.text = "Escudo : " + escudo;
+        ammoAuto.text = "" + AmmoAuto;
+        ammoExplo.text = "" + AmmoeExpl;
+        ammoFire.text = "" + AmmoFire;
 
         //Respawn
         if (vida <= 0)

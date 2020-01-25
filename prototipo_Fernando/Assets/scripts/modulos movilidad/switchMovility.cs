@@ -5,6 +5,10 @@ using UnityEngine;
 public class switchMovility : MonoBehaviour
 {
     public int SeleccionMovilidad = 0;
+
+    public GameObject turbo;
+    public GameObject teleport;
+    public GameObject gancho;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +36,25 @@ public class switchMovility : MonoBehaviour
         if (PreviousSelectedWeapon != SeleccionMovilidad)
         {
             SelectWeapon();
+        }
+
+        if (SeleccionMovilidad == 0)
+        {
+            turbo.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+            teleport.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            gancho.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+        }
+        if (SeleccionMovilidad == 1)
+        {
+            turbo.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            teleport.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            gancho.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+        }
+        if (SeleccionMovilidad == 2)
+        {
+            turbo.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
+            teleport.transform.localScale = new Vector3(1.8f, 1.8f, 1.8f);
+            gancho.transform.localScale = new Vector3(1.2f, 1.2f, 1.2f);
         }
     }
     void SelectWeapon()
