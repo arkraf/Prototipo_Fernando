@@ -8,6 +8,7 @@ public class AreaElectrica : MonoBehaviour
     public gameManager mng;
     public GameObject electricidad;
     public float radius;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,13 @@ public class AreaElectrica : MonoBehaviour
             collision.GetComponent<NavMeshAgent>().speed = 0;
 
         }
+        if (collision.gameObject.tag == "enemigoArmado")
+        {
+            collision.GetComponent<enemigoArmado>().speed = 0;
+            collision.GetComponentInChildren<balaSpawner>().enabled = false;
+            collision.GetComponentInChildren<BoxCollider>().enabled = false;
+        }
+
 
 
     }

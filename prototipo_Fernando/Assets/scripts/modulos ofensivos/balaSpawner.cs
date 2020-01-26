@@ -33,6 +33,7 @@ public class balaSpawner : MonoBehaviour
         //Recuerdo comprobar siempre si el retorno no es nulo,antes de usar la variable
 
         balaNormal script = bala.GetComponent<balaNormal>();
+        
         if(script != null)
         {
             script.speed = 0.5f;

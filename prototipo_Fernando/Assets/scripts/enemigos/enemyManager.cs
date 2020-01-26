@@ -22,9 +22,13 @@ public class enemyManager : MonoBehaviour
         {
             mng.exp += 20;
             Instantiate(drop, transform.position, transform.rotation);
-            Destroy(this.gameObject);
+            Destroy(this.gameObject);      
+            
         }
     }
+    
+
+    
     
     
    

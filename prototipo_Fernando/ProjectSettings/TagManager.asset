@@ -9,6 +9,9 @@ TagManager:
   - pared
   - elMuro
   - enemigoArmado
+  - Punto 2
+  - Punto 1
+  - enganche
   layers:
   - Default
   - TransparentFX
