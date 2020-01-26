@@ -26,10 +26,22 @@ public class armadoLaser : MonoBehaviour
         {
             agent.SetDestination(target.position);
         }
+        if (distance <= agent.stoppingDistance)
+        {
+
+        }
+        if( agent.speed == 0)
+        {
+            Invoke("reactivar", 5f);
+        }
     }
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
+    }
+    public void reactivar()
+    {
+        agent.speed = 8;
     }
 }

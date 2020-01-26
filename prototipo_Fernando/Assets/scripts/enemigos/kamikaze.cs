@@ -10,7 +10,8 @@ public class kamikaze : MonoBehaviour
     public float danno;
     public float lookRadius = 10f;
     public gameManager mng;
-    
+    public enemyManager enemy;
+    public GameObject explosion;
 
     Transform target;
     NavMeshAgent agent;
@@ -30,13 +31,16 @@ public class kamikaze : MonoBehaviour
         {
             agent.SetDestination(target.position) ;
         }
+        
     }
    
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collision)
     {
         
         if (collision.gameObject.tag == "Player")
-        {       
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            
             mng.vida -= danno;
             explode();
         }
@@ -54,7 +58,8 @@ public class kamikaze : MonoBehaviour
                 rb.AddExplosionForce(force, transform.position, radius);
             }
         }
-        Destroy(this.gameObject);
+
+        enemy.vida = 0;
     }
     private void OnDrawGizmosSelected()
     {

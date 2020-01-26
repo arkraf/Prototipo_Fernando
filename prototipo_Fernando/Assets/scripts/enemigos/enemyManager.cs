@@ -6,6 +6,7 @@ public class enemyManager : MonoBehaviour
 {
     public float vida = 100;
     public gameManager mng;
+    public GameObject drop;
      
 
     // Start is called before the first frame update
@@ -20,10 +21,11 @@ public class enemyManager : MonoBehaviour
         if (vida <= 0)
         {
             mng.exp += 20;
+            Instantiate(drop, transform.position, transform.rotation);
             Destroy(this.gameObject);
         }
     }
-
+    
     
    
 }

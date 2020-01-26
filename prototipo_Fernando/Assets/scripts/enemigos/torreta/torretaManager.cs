@@ -26,12 +26,22 @@ public class torretaManager : MonoBehaviour
             {
                 GameObject.Find("cabeza").GetComponent<LookAt>().enabled = false;
                 GameObject.Find("cañon").GetComponent<balaSpawner>().enabled = false;
-                botonInteract.SetActive(false);
+                
                 
             }
            
         }
 
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.gameObject.tag == "Player")
+        {
+            botonInteract.SetActive(false);
+
+        }
         
     }
 }

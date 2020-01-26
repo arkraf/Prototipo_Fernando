@@ -105,6 +105,8 @@ MonoBehaviour:
   danno: 40
   lookRadius: 10
   mng: {fileID: 0}
+  enemy: {fileID: 8040587941338118724}
+  explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!114 &8040587941338118724
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,6 +120,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 100
+  mng: {fileID: 0}
+  drop: {fileID: 372775936716199200, guid: f4bf991f93d05fc409bddfb6397a1d07, type: 3}
 --- !u!1 &8040587941957849025
 GameObject:
   m_ObjectHideFlags: 0

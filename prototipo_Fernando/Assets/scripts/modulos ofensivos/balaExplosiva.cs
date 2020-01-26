@@ -9,7 +9,9 @@ public class balaExplosiva : MonoBehaviour
     public float radius;
     public float force;
     public int danno;
+    public int dannoArm;
     public enemyManager enemy;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class balaExplosiva : MonoBehaviour
     {
         transform.Translate(Vector3.forward * speed);
         Invoke("explode", timeToExplode);
+
     }
      public void explode()
     {
@@ -34,6 +37,7 @@ public class balaExplosiva : MonoBehaviour
                 rb.AddExplosionForce(force, transform.position, radius);
             }
         }
+        Instantiate(explosion, transform.position, transform.rotation);
         Destroy(this.gameObject);
     }
     private void OnTriggerEnter(Collider collision)
@@ -41,17 +45,27 @@ public class balaExplosiva : MonoBehaviour
         explode();
         if (collision.gameObject.tag == "enemigo")
         {
-            
+            Instantiate(explosion, transform.position, transform.rotation);
             enemy = collision.gameObject.GetComponent<enemyManager>();
             enemy.vida -= danno;
 
         }
         Destroy(this.gameObject);
 
+        if (collision.gameObject.tag == "enemigoArmado")
+        {
+            Instantiate(explosion, transform.position, transform.rotation);
+            enemy = collision.gameObject.GetComponent<enemyManager>();
+            enemy.vida -= dannoArm;
+
+        }
+        Destroy(this.gameObject);
+
         if (collision.gameObject.tag == "pared")
         {
+            Instantiate(explosion, transform.position, transform.rotation);
             Destroy(collision.gameObject);
-            Debug.Log("pipo");
+            
         }
         Destroy(this.gameObject);
     }

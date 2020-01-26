@@ -27,7 +27,7 @@ public class fuego : MonoBehaviour
     private void OnTriggerStay(Collider collision)
     {
         
-        if (collision.gameObject.tag == "enemigo")
+        if ((collision.gameObject.tag == "enemigo")|| (collision.gameObject.tag == "enemigoArmado"))
         {
             enemy = collision.gameObject.GetComponent<enemyManager>();
             quemar = true;

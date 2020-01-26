@@ -112,7 +112,9 @@ MonoBehaviour:
   radius: 20
   force: 1000
   danno: 40
+  dannoArm: 20
   enemy: {fileID: 0}
+  explosion: {fileID: 1000011797152326, guid: acf39d9f4addf294d93fa56fa373961b, type: 3}
 --- !u!54 &3783952263849234775
 Rigidbody:
   m_ObjectHideFlags: 0

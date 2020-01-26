@@ -41,7 +41,6 @@ GameObject:
   - component: {fileID: 170848825570335818}
   - component: {fileID: 170848825570335831}
   - component: {fileID: 170848825570335828}
-  - component: {fileID: 170848825570335829}
   - component: {fileID: 170848825570335830}
   m_Layer: 0
   m_Name: muro
@@ -112,19 +111,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848825570335829
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170848825570335819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &170848825570335830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +219,6 @@ GameObject:
   - component: {fileID: 170848826012983874}
   - component: {fileID: 170848826012983887}
   - component: {fileID: 170848826012983884}
-  - component: {fileID: 170848826012983885}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -301,19 +286,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848826012983885
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170848826012983875}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &170848826141675284
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,7 +442,7 @@ MonoBehaviour:
   vida: 100
   vidaMax: 100
   escudo: 0
-  escudoMax: 0
+  escudoMax: 50
   exp: 0
   expNeed: 100
   nivel: 1
@@ -491,8 +463,11 @@ MonoBehaviour:
   contadorCombustible: {fileID: 0}
   contadorExp: {fileID: 0}
   contadorEscudo: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 170848826141675282}
   respawn: {fileID: 0}
+  ammoAuto: {fileID: 0}
+  ammoExplo: {fileID: 0}
+  ammoFire: {fileID: 0}
 --- !u!1 &170848826194032845
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeleccionMovilidad: 0
+  turbo: {fileID: 0}
+  teleport: {fileID: 0}
+  gancho: {fileID: 0}
 --- !u!1 &170848826317972862
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +595,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeleccionArma: 0
+  ammoAuto: {fileID: 0}
+  ammoExplo: {fileID: 0}
+  ammoFire: {fileID: 0}
 --- !u!1 &170848826842412044
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +639,6 @@ GameObject:
   - component: {fileID: 170848826929092533}
   - component: {fileID: 170848826929092534}
   - component: {fileID: 170848826929092535}
-  - component: {fileID: 170848826929092532}
   - component: {fileID: 170848826929092529}
   m_Layer: 0
   m_Name: explosivo
@@ -728,19 +708,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848826929092532
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170848826929092522}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &170848826929092529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,7 +784,6 @@ GameObject:
   - component: {fileID: 170848827085591860}
   - component: {fileID: 170848827085591857}
   - component: {fileID: 170848827085591862}
-  - component: {fileID: 170848827085591863}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -885,19 +851,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848827085591863
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170848827085591861}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &170848827127273823
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,7 +862,6 @@ GameObject:
   - component: {fileID: 170848827127273822}
   - component: {fileID: 170848827127273819}
   - component: {fileID: 170848827127273816}
-  - component: {fileID: 170848827127273817}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -977,19 +929,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848827127273817
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170848827127273823}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &170848827159209419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +940,7 @@ GameObject:
   - component: {fileID: 170848827159209418}
   - component: {fileID: 170848827159209431}
   - component: {fileID: 170848827159209428}
-  - component: {fileID: 170848827159209429}
+  - component: {fileID: 170457833}
   m_Layer: 0
   m_Name: escudo
   m_TagString: Untagged
@@ -1069,19 +1008,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848827159209429
-BoxCollider:
+--- !u!114 &170457833
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170848827159209419}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad8181ec17c7cff47998e7388bef6bdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mng: {fileID: 170848826141675292}
 --- !u!1 &170848827241017915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,14 +1032,15 @@ GameObject:
   - component: {fileID: 170848827241017914}
   - component: {fileID: 170848827241017927}
   - component: {fileID: 170848827241017924}
-  - component: {fileID: 170848827241017925}
+  - component: {fileID: 1517738176}
+  - component: {fileID: 1517738173}
   m_Layer: 0
   m_Name: area electrica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &170848827241017914
 Transform:
   m_ObjectHideFlags: 0
@@ -1161,19 +1101,35 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848827241017925
-BoxCollider:
+--- !u!135 &1517738176
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 170848827241017915}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 16.779034
+  m_Center: {x: 0, y: 0, z: -0.053883508}
+--- !u!114 &1517738173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 170848827241017915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f10383118b4cdb45800779f57a4512b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mng: {fileID: 170848826141675292}
+  electricidad: {fileID: 1000011128802252, guid: 96730f8640590934eacb6f860058e7f9,
+    type: 3}
+  radius: 10
 --- !u!1 &170848827277989899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,7 +1141,6 @@ GameObject:
   - component: {fileID: 170848827277989898}
   - component: {fileID: 170848827277989911}
   - component: {fileID: 170848827277989908}
-  - component: {fileID: 170848827277989909}
   - component: {fileID: 170848827277989910}
   m_Layer: 0
   m_Name: arma automatica
@@ -1254,19 +1209,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848827277989909
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170848827277989899}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &170848827277989910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,7 +1237,6 @@ GameObject:
   - component: {fileID: 170848827286567282}
   - component: {fileID: 170848827286567295}
   - component: {fileID: 170848827286567292}
-  - component: {fileID: 170848827286567293}
   - component: {fileID: 170848827286567294}
   m_Layer: 0
   m_Name: lanzallamas
@@ -1366,19 +1307,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &170848827286567293
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 170848827286567283}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &170848827286567294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1442,6 +1370,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SeleccionDefensa: 0
+  escudo: {fileID: 0}
+  muro: {fileID: 0}
+  areaElectrica: {fileID: 0}
+--- !u!65 &1173278201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997265696139455484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.966559, y: 1, z: 2.4461238}
+  m_Center: {x: 0.4832797, y: 0, z: 0.7230619}
 --- !u!114 &92995923832538787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1468,15 +1412,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: muro
       objectReference: {fileID: 0}
-    - target: {fileID: 142694098493158756, guid: 691b6f537965d174cbec2383c7b30ef7,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 142694098493158552, guid: 691b6f537965d174cbec2383c7b30ef7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11537123
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 142694098493158552, guid: 691b6f537965d174cbec2383c7b30ef7,
         type: 3}
@@ -1528,17 +1467,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 142694098493158552, guid: 691b6f537965d174cbec2383c7b30ef7,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.425625
+      objectReference: {fileID: 0}
+    - target: {fileID: 142694098493158552, guid: 691b6f537965d174cbec2383c7b30ef7,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.868474
+      objectReference: {fileID: 0}
+    - target: {fileID: 142694098493158552, guid: 691b6f537965d174cbec2383c7b30ef7,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5205036
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 691b6f537965d174cbec2383c7b30ef7, type: 3}
---- !u!4 &262345246215589680 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 142694098493158552, guid: 691b6f537965d174cbec2383c7b30ef7,
-    type: 3}
-  m_PrefabInstance: {fileID: 170848826621164456}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &262345246215589580 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 142694098493158756, guid: 691b6f537965d174cbec2383c7b30ef7,
+    type: 3}
+  m_PrefabInstance: {fileID: 170848826621164456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &262345246215589680 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 142694098493158552, guid: 691b6f537965d174cbec2383c7b30ef7,
     type: 3}
   m_PrefabInstance: {fileID: 170848826621164456}
   m_PrefabAsset: {fileID: 0}
@@ -1604,10 +1558,6 @@ PrefabInstance:
     - target: {fileID: 4000013285487154, guid: 3123da49cb81147489b444f2749aba47, type: 3}
       propertyPath: m_LocalScale.y
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4000013285487154, guid: 3123da49cb81147489b444f2749aba47, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3123da49cb81147489b444f2749aba47, type: 3}

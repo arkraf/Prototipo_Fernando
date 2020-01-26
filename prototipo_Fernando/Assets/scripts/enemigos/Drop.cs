@@ -12,7 +12,9 @@ public class Drop : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        mng = GameObject.Find("Player").GetComponent<gameManager>();
+
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame

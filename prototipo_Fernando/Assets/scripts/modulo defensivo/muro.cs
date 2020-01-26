@@ -22,7 +22,7 @@ public class muro : MonoBehaviour
         
         if (mng.energia >= 30) 
         {
-            if (Input.GetMouseButton(1))
+            if (Input.GetMouseButtonDown(1))
             {
                 wallPrefab.SetActive(true);
 

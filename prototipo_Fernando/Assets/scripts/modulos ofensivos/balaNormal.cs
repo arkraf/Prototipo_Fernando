@@ -47,7 +47,7 @@ public class balaNormal : MonoBehaviour
         }
       
 
-        if (collision.gameObject.tag == "enemigo")
+        if ((collision.gameObject.tag == "enemigo") ||(collision.gameObject.tag == "enemigoArmado"))
         {
             enemy = collision.gameObject.GetComponent<enemyManager>();
             enemy.vida -= danno;
