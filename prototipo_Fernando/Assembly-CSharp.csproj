@@ -70,10 +70,6 @@
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
     <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\electricidad.cs" />
-    <Compile Include="Assets\gancho.cs" />
-    <Compile Include="Assets\resbaladizo.cs" />
-    <Compile Include="Assets\scripts\Barro.cs" />
     <Compile Include="Assets\scripts\enemigos\destruccion.cs" />
     <Compile Include="Assets\scripts\enemigos\Drop.cs" />
     <Compile Include="Assets\scripts\enemigos\enemigoArmado.cs" />
@@ -83,9 +79,11 @@
     <Compile Include="Assets\scripts\enemigos\torreta\LookAt.cs" />
     <Compile Include="Assets\scripts\enemigos\torreta\torretaManager.cs" />
     <Compile Include="Assets\scripts\modulo defensivo\AreaElectrica.cs" />
+    <Compile Include="Assets\scripts\modulo defensivo\electricidad.cs" />
     <Compile Include="Assets\scripts\modulo defensivo\escudo.cs" />
     <Compile Include="Assets\scripts\modulo defensivo\muro.cs" />
     <Compile Include="Assets\scripts\modulo defensivo\switchDefense.cs" />
+    <Compile Include="Assets\scripts\modulos movilidad\gancho.cs" />
     <Compile Include="Assets\scripts\modulos movilidad\switchMovility.cs" />
     <Compile Include="Assets\scripts\modulos movilidad\teletransporte.cs" />
     <Compile Include="Assets\scripts\modulos movilidad\turbo.cs" />
@@ -103,6 +101,8 @@
     <Compile Include="Assets\scripts\Player\playerManager.cs" />
     <Compile Include="Assets\scripts\Player\recogida.cs" />
     <Compile Include="Assets\scripts\Player\SmoothPosition.cs" />
+    <Compile Include="Assets\scripts\terreno\Barro.cs" />
+    <Compile Include="Assets\scripts\terreno\resbaladizo.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
